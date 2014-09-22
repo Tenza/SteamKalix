@@ -23,8 +23,8 @@
 #include <QPixmap>
 #include <QScopedArrayPointer>
 #include <QXmlStreamReader>
-#include "defines.h"
 
+#include "defines.h"
 #include "output.h"
 #include "helper.h"
 #include "accountdata.h"

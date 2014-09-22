@@ -16,12 +16,9 @@ SOURCES += main.cpp\
         login.cpp \
         persistentcookiejar.cpp \
         settingsmanager.cpp \
-        buy.cpp \
         networkmanager.cpp \
-        listing.cpp \
         replytimeout.cpp \
         threadmanager.cpp \
-        sell.cpp \
         helper.cpp \
         accountdata.cpp \
         listingsmanager.cpp \
@@ -31,12 +28,9 @@ HEADERS  += steamkalix.h \
         login.h \
         persistentcookiejar.h \
         settingsmanager.h \
-        buy.h \
         networkmanager.h \
-        listing.h \
         replytimeout.h \
         threadmanager.h \
-        sell.h \
         helper.h \
         accountdata.h \
         listingsmanager.h \

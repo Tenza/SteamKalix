@@ -84,10 +84,10 @@ void debug_messages_handler(QtMsgType type, const QMessageLogContext &context, c
  * Compilation:
  *  Tested on:
  *      Windows 7 64bit
- *		Arch 3.16.1 64Bit
- *		Ubuntu 14.04 64Bit
+ *      Arch 3.16.1 64Bit
+ *      Ubuntu 14.04 64Bit
  *      Ubuntu 14.04 32Bit
- *      	
+ *
  * SteamKalix:
  * +TODO v0.1: Login interface base.
  * +TODO v0.1: Login proxy support.
