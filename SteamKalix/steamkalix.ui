@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SteamKalix</class>
+ <widget class="QMainWindow" name="SteamKalix">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SteamKalix</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="minimumSize">
+    <size>
+     <width>800</width>
+     <height>0</height>
+    </size>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <item>
+         <widget class="QTabWidget" name="tab_container">
+          <property name="currentIndex">
+           <number>2</number>
+          </property>
+          <widget class="QWidget" name="tab_login">
+           <attribute name="title">
+            <string>Login</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QLabel" name="lbl_accounts">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Accounts:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="cb_accounts">
+                <item>
+                 <property name="text">
+                  <string>New Account</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_accounts_remove">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Remove</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="group_login">
+              <property name="title">
+               <string>Login</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout">
+                 <item>
+                  <widget class="QLabel" name="lbl_username">
+                   <property name="text">
+                    <string>Username</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="txt_username"/>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="lbl_password">
+                   <property name="text">
+                    <string>Password</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="txt_password">
+                   <property name="echoMode">
+                    <enum>QLineEdit::Password</enum>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="group_captcha">
+              <property name="title">
+               <string>Captcha</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_3">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_9">
+                 <item>
+                  <spacer name="horizontalSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Fixed</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>63</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="lbl_captcha">
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="resources.qrc">:/resources/resources/captcha.png</pixmap>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_2">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_3">
+                 <item>
+                  <widget class="QLabel" name="lbl_char_captcha">
+                   <property name="text">
+                    <string>Caracteres:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="txt_captcha"/>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="group_steamguard">
+              <property name="title">
+               <string>SteamGuard</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_4">
+                 <item>
+                  <widget class="QLabel" name="lbl_guard_code">
+                   <property name="text">
+                    <string>Code</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="lbl_guard_name">
+                   <property name="text">
+                    <string>Friendly Name</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_10">
+                 <item>
+                  <widget class="QLineEdit" name="txt_guard_code"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="txt_guard_name"/>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="cb_remember_login">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Save the cookies and use them on the next login. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;If you logout, the cookies will be cleared with exception of the ones that identify the machine. Those cannot be cleared in order to avoid the 7 day market delay. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Remember login</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="cb_append_account">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;THIS OPTION IS NO LONGER NEEDED&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This option will append an account to the currently selected account with the purpose of dividing the requests from a single listing. Buy and sell operations are made with the Main account.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;This option was created because&lt;/span&gt; on 28 of May 2014, Valve started restricting the requests made to their servers, and this restriction was IP based. The best solution to this problem was to use proxys to redirect the traffic. But now we have another problem, Valve is logging the IP's and can easily detect bots by counting the number of IP’s that an account used. In order to solve the problem created, this option was born. This option will make the main account safer, because it will divide the requests made between accounts and the proxys set to them.&lt;/p&gt;&lt;p&gt;For reference, try to keep the number of IP's per account bellow 10. Users of the public bot started to have their accounts under examination because they used more than 10 IP's.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;This option is no longer needed because&lt;/span&gt; previously we needed to send our account credentials so that the prices from the items would match the currency on the account. Now Valve made it possible to get the items with the correct currency conversion just by applying a parameter to the URL without having to send or account credentials. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Append account</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="cb_disable_proxys">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;This option disables the use of proxys. &lt;br/&gt;&lt;/span&gt;Having this option selected, or not having any proxys on the Proxys Tab has the same efect.&lt;/p&gt;&lt;p&gt;To re-enable this setting you have to re-login. &lt;br/&gt;To add new proxys, you have to re-login to take effect.&lt;/p&gt;&lt;p&gt;If &amp;quot;Disable proxies&amp;quot; and &amp;quot;Disable connections&amp;quot; &lt;span style=&quot; font-weight:600;&quot;&gt;are not selected&lt;/span&gt;, both connections will be used for listining items. &lt;/p&gt;&lt;p&gt;If &amp;quot;Disable proxies&amp;quot; and &amp;quot;Disable connections&amp;quot; &lt;span style=&quot; font-weight:600;&quot;&gt;are selected&lt;/span&gt;, this will deactivate the main account. Meaning that the main account will not make any requests for listing pages, it will only be used for buy and sell operations.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Disable proxys</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="cb_disable_direct">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;This option disables the use of direct connections. &lt;br/&gt;&lt;/span&gt;Every connection made through this account will only have connections using proxys. &lt;/p&gt;&lt;p&gt;To re-enable this setting you have to re-login. &lt;/p&gt;&lt;p&gt;If &amp;quot;Disable proxies&amp;quot; and &amp;quot;Disable connections&amp;quot;&lt;span style=&quot; font-weight:600;&quot;&gt; are not selected&lt;/span&gt;, both connections will be used for listining items. &lt;/p&gt;&lt;p&gt;If &amp;quot;Disable proxies&amp;quot; and &amp;quot;Disable connections&amp;quot; &lt;span style=&quot; font-weight:600;&quot;&gt;are selected&lt;/span&gt;, this will deactivate the main account. Meaning that the main account will not make any requests for listing pages, it will only be used for buy and sell operations.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Disable direct connections</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="cb_disable_cookies">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;This option will let you create an empty account.&lt;/span&gt;&lt;br/&gt;Meaning that you can set listings without sending any credentials to the server. The cookies will only be used to make buy and sell operations.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Disable cookies</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <widget class="QPushButton" name="btn_login">
+                <property name="text">
+                 <string>Login</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_logout">
+                <property name="text">
+                 <string>Logout</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>379</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_proxy">
+           <attribute name="title">
+            <string>Proxys</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_11">
+            <item>
+             <widget class="QGroupBox" name="group_proxy">
+              <property name="title">
+               <string>Proxy</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_20">
+                 <item>
+                  <widget class="QLabel" name="lbl_porxy_hostname">
+                   <property name="text">
+                    <string>Hostname</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="lbl_proxy_hostport">
+                   <property name="text">
+                    <string>Port</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_17">
+                 <item>
+                  <widget class="QLineEdit" name="txt_proxy_hostname">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maxLength">
+                    <number>40</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="sb_proxy_hostport">
+                   <property name="minimum">
+                    <number>1</number>
+                   </property>
+                   <property name="maximum">
+                    <number>65535</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_22">
+                 <item>
+                  <widget class="QLabel" name="lbl_proxy_username">
+                   <property name="text">
+                    <string>Username</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="lbl_proxy_password">
+                   <property name="text">
+                    <string>Password</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_23">
+                 <item>
+                  <widget class="QLineEdit" name="txt_proxy_username"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="txt_proxy_password">
+                   <property name="echoMode">
+                    <enum>QLineEdit::Password</enum>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_8">
+                 <item>
+                  <widget class="QLabel" name="lbl_proxy_type">
+                   <property name="text">
+                    <string>Type</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="lbl_proxy_account">
+                   <property name="text">
+                    <string>Account</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                 <item>
+                  <widget class="QComboBox" name="cb_proxy_type">
+                   <item>
+                    <property name="text">
+                     <string>HttpProxy</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Socks5Proxy</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="cb_proxy_account"/>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_25">
+              <item>
+               <widget class="QPushButton" name="btn_add_proxy">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Proxys are added on-the-fly.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;This only works if the option &amp;quot;Disable Proxys&amp;quot; has not been selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Add Proxy</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_remove_proxy">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Proxys are removed on-the-fly.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;This only works if the option &amp;quot;Disable Proxys&amp;quot; has not been selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Remove Proxy</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="table_proxys">
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="showDropIndicator" stdset="0">
+               <bool>false</bool>
+              </property>
+              <property name="dragDropOverwriteMode">
+               <bool>false</bool>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::SingleSelection</enum>
+              </property>
+              <property name="selectionBehavior">
+               <enum>QAbstractItemView::SelectRows</enum>
+              </property>
+              <property name="cornerButtonEnabled">
+               <bool>false</bool>
+              </property>
+              <attribute name="horizontalHeaderHighlightSections">
+               <bool>false</bool>
+              </attribute>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_listings">
+           <attribute name="title">
+            <string>Manual Listing</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <widget class="QGroupBox" name="group_listing">
+              <property name="title">
+               <string>Listing</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_18">
+                 <item>
+                  <widget class="QLabel" name="lbl_link">
+                   <property name="text">
+                    <string>Link</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_buy">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Should we buy the item of just notify?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>Buy</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_sell">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Should we resell the item?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>Sell</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout">
+                 <item>
+                  <widget class="QLineEdit" name="txt_link">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                     <horstretch>1</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Input here the link from the market listing. This link will be automatically corrected to the internal page with /render/ and the 'count' GET parameter will be dynamically adjusted. If the user wishes to disable this behavior, set the 'count' parameter manually. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="sb_price_buy">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                     <horstretch>1</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximum">
+                    <double>999.990000000000009</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>0.010000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="sb_price_sell">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                     <horstretch>1</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximum">
+                    <double>999.990000000000009</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>0.010000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="group_options">
+              <property name="title">
+               <string>Connectivity Options</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_8">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_11">
+                 <item>
+                  <widget class="QLabel" name="lbl_connections">
+                   <property name="text">
+                    <string>HTTP Connections</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="lbl_refresh">
+                   <property name="text">
+                    <string>Refresh rate</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                 <item>
+                  <widget class="QSpinBox" name="sb_connections">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of parallel HTTP connections that the thread will make. The maximum number is 6 because that is the maximum number supported of parallel connections to the same host/port by the NetworkManager. Also, when only one connection is made, the application will not compare results wil previous replys.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="minimum">
+                    <number>1</number>
+                   </property>
+                   <property name="maximum">
+                    <number>6</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="sb_refresh">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This value defines the speed of the thread. Setting the value to 0 will make continuous updades, but this is not recommended for multiple threads with multiple connections because it will consume more power than it is needed. Internally the thread uses a timer, and this value defines the timeout of this timer.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="maximum">
+                    <number>60000</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>100</number>
+                   </property>
+                   <property name="value">
+                    <number>1000</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_15">
+                 <item>
+                  <widget class="QLabel" name="lbl_timeout">
+                   <property name="text">
+                    <string>Timeout</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="lbl_delay">
+                   <property name="text">
+                    <string>Delay</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_14">
+                 <item>
+                  <widget class="QSpinBox" name="sb_timeout">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;Sets the timeout for each connection made by this listing. With this option, it is guaranteed that the listing will always return because the connection will be explicitly terminated when the time ends. On the other hand, the general performance will have a hit, because each connection will have a timer associated. If set to 0, the timeout will be set to default. 
+&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="maximum">
+                    <number>60000</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>100</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_19">
+                   <item>
+                    <widget class="QSpinBox" name="sb_delay">
+                     <property name="toolTip">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This value defines the amount of time that the thread will wait to start a new connection. This time is applyed for each connection, and starts counting after the current connection completely finishes. &lt;span style=&quot; font-weight:600;&quot;&gt;To effectivly apply a delay, this value should be higher that the refresh rate.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                     <property name="maximum">
+                      <number>60000</number>
+                     </property>
+                     <property name="singleStep">
+                      <number>100</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_delay_random">
+                     <property name="toolTip">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sellecting this option will randomize the amount of time used on the delay. &lt;span style=&quot; font-weight:600;&quot;&gt;This option will use the value set on the box as its maximum value and the refresh rate as a minimum..&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                     <property name="text">
+                      <string>Random</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox">
+              <property name="title">
+               <string>Listing Options</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_7">
+               <item>
+                <widget class="QCheckBox" name="cb_email">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>Send email</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_16">
+                 <item>
+                  <widget class="QCheckBox" name="cb_pause">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pauses the listing when N itens are bought. &lt;span style=&quot; font-weight:600;&quot;&gt;Requires the 'Buy' checkbox to be checked.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>Pause when</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="sb_pause_number">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="toolTip">
+                    <string/>
+                   </property>
+                   <property name="minimum">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="lbl_pause">
+                   <property name="text">
+                    <string> items are bought</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="cb_resume">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This option will toogle between buy and sell operations. New N items will only be bought when the last item of the same type is sold. Enable this option for aditional safety. &lt;span style=&quot; font-weight:600;&quot;&gt;Requires the checkboxs 'Buy', 'Sell', 'Pause'  to be checked. It will resume automatically.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string>Resume when last item of the same type is sold</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_13">
+              <item>
+               <widget class="QPushButton" name="btn_add">
+                <property name="text">
+                 <string>Add listning</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_remove">
+                <property name="text">
+                 <string>Remove listning</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_resume">
+                <property name="text">
+                 <string>Resume</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_pause">
+                <property name="text">
+                 <string>Pause</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="table_listings">
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="showDropIndicator" stdset="0">
+               <bool>false</bool>
+              </property>
+              <property name="dragDropOverwriteMode">
+               <bool>false</bool>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::SingleSelection</enum>
+              </property>
+              <property name="selectionBehavior">
+               <enum>QAbstractItemView::SelectRows</enum>
+              </property>
+              <property name="cornerButtonEnabled">
+               <bool>false</bool>
+              </property>
+              <attribute name="horizontalHeaderHighlightSections">
+               <bool>false</bool>
+              </attribute>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_options">
+           <attribute name="title">
+            <string>Options</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_12">
+            <item>
+             <widget class="QCheckBox" name="cb_logging">
+              <property name="text">
+               <string>Enable Logging</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="gb_verbose">
+              <property name="title">
+               <string>Verbose Level</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_3">
+               <item row="0" column="0">
+                <widget class="QRadioButton" name="rb_log_essencial">
+                 <property name="text">
+                  <string>Essencial</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QRadioButton" name="rb_log_normal">
+                 <property name="text">
+                  <string>Normal</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QRadioButton" name="rb_log_debug">
+                 <property name="text">
+                  <string>Debug</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lbl_language">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Language:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cb_language">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lbl_currency">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Currency:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cb_currency">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lbl_country">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Country:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cb_country">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>462</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="1">
+            <widget class="QComboBox" name="cb_selected_account"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="lbl_selected_account">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Selected account:</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPlainTextEdit" name="console">
+       <property name="font">
+        <font>
+         <family>Consolas</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 0, 0); color: white;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOn</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="undoRedoEnabled">
+        <bool>false</bool>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
