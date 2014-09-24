@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>resources/captcha.png</file>
+    </qresource>
+</RCC>
