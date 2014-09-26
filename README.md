@@ -22,3 +22,7 @@ Cross-platform Steam Market Bot.
 - Dynamic scaling of requested items.
 - Set verbose levels.
 - Enable logging.
+
+##Application
+
+[![Click here to view the image!](http://s13.postimg.org/q5ajqwh1j/fotografia1.png)](http://s13.postimg.org/q5ajqwh1j/fotografia1.png)
